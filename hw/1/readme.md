@@ -67,9 +67,12 @@ if __name__ == "__main__":
   for i in range(100, 9, -1):
     if (i % 10 == 0):
       index = int(i / 10) - 1
-      if(round(sd[index],2) == round(obj.sd, 2)):
+      if (round(sd[index],2) == round(obj.sd, 2)):
         print ("-------------------------------")
         print ("Values are equal - {}".format(sd[index]))
+      if (round(mean[index],2) == round(obj.mu, 2)):
+        print ("-------------------------------")
+        print ("Values are equal - {}".format(mu[index]))
     obj.delete(nums[i-1])
 
 
@@ -78,7 +81,7 @@ class Sym(Col):
     Col.__init__(self)
     pass
   
-class Sym(Col):
+class Some(Col):
   def __init__(self):
     Col.__init__(self)
     pass
@@ -90,24 +93,34 @@ class Sym(Col):
 
 ```
 -------------------------------
-Values are equal - 28.426556085975157
+Mean is equal - 51.62
+SD is equal - 29.666421517543462
 -------------------------------
-Values are equal - 28.461703029260967
+Mean is equal - 52.56666666666666
+SD is equal - 30.103585213336785
 -------------------------------
-Values are equal - 28.379210500075494
+Mean is equal - 54.5
+SD is equal - 30.3231540392169
 -------------------------------
-Values are equal - 28.351301086403875
+Mean is equal - 53.41428571428572
+SD is equal - 30.440958704904588
 -------------------------------
-Values are equal - 28.743262536513456
+Mean is equal - 54.78333333333333
+SD is equal - 29.869825864493112
 -------------------------------
-Values are equal - 28.465202530493983
+Mean is equal - 52.239999999999995
+SD is equal - 29.32127457763634
 -------------------------------
-Values are equal - 28.38995849926068
+Mean is equal - 55.974999999999994
+SD is equal - 29.882236812579425
 -------------------------------
-Values are equal - 27.322699080754656
+Mean is equal - 57.499999999999986
+SD is equal - 29.481437760288987
 -------------------------------
-Values are equal - 27.885621648742962
+Mean is equal - 56.6
+SD is equal - 29.19336622554767
 -------------------------------
-Values are equal - 22.26207537495101
+Mean is equal - 57.60000000000001
+SD is equal - 34.712149650134506
 
 ```

@@ -63,9 +63,11 @@ if __name__ == "__main__":
   for i in range(100, 9, -1):
     if (i % 10 == 0):
       index = int(i / 10) - 1
-      if(round(sd[index],2) == round(obj.sd, 2)):
-        print ("-------------------------------")
-        print ("Values are equal - {}".format(sd[index]))
+      print ("-------------------------------")
+      if (round(mean[index],2) == round(obj.mu, 2)):
+        print ("Mean is equal - {}".format(mean[index]))
+      if (round(sd[index],2) == round(obj.sd, 2)):
+        print ("SD is equal - {}".format(sd[index]))
     obj.delete(nums[i-1])
 
 
