@@ -2,5 +2,6 @@
 
 ## Team Members
 
-Harsh Agrawal - hagrawa2
-Siddu Madhure Jayanna - smadhur
+* Harsh Agrawal - hagrawa2
+           
+* Siddu Madhure Jayanna - smadhur
