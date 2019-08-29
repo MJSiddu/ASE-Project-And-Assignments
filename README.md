@@ -3,4 +3,4 @@
 ## Team Members
 
 Harsh Agrawal - hagrawa2
-Siddu Madhur - smadhur
+Siddu Madhure Jayanna - smadhur
