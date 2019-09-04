@@ -2,6 +2,14 @@ import random
 import sys
 import re
 
+
+class Row(object):
+  def __init__(self):
+    self.cells = []
+    self.cooked = []
+    self.dom = 0
+
+
 # Parent class Col
 class Col(object):
   def __init__(self, n, col, text):
@@ -11,17 +19,62 @@ class Col(object):
 
 class Tbl(object):
 
-  def __init__(self, strData):
-    self.data = strData
+  def __init__(self):
     self.cols = []
     self.rows =[]
 
-  def read(self, file):
-    pass
+  def read(self, data):
+    self.data = []
+    for lst in fromString(s):
+      self.data.append(lst)
+    for i in range(len(self.data)):
+      if(i  == 0):
+        self.generateCols(self.data[i])
+      else:
+        if(isinstance(self.data[i], list) == True):
+          self.addRow(self.data[i])
+          self.updateCols(self.data[i])
+
+    
+  def generateCols(self, colList):
+    for i in range(len(colList)):
+      col = Num(i, colList[i])
+      self.cols.append(col)
 
   def dump(self):
-    pass
+    print("t.cols")
+    for i in range(len(self.cols)):
+      print("|   {}".format(i+1))
+      print("|  |  txt: {}".format(self.cols[i].text))
+      print("|  |  col :{}".format(self.cols[i].col + 1))
+      print("|  |  m2 :{}".format(self.cols[i].m2))
+      print("|  |  mu :{}".format(self.cols[i].mu))
+      print("|  |  n :{}".format(self.cols[i].n))
+      print("|  |  sd :{}".format(self.cols[i].sd))
+    print("t.rows")
+    for i in range(len(self.rows)):
+      print("|   {}".format(i+1))
+      print("|  |  dom: {}".format(self.rows[i].dom))
+      print("|  |  cooked :{}".format(self.rows[i].cooked))
+      print("|  |  cells :{}".format(self.rows[i].cells))
+  
+    
 
+  def addRow(self, rowData):
+      row = Row()
+      for i in range(len(rowData)):
+        op = compiler(rowData[i])
+        data = op(rowData[i])
+        row.cells.append(data)
+      self.rows.append(row)
+
+  def updateCols(self, rowData):
+    for i in range(len(rowData)):
+      op = compiler(rowData[i])
+      data = op(rowData[i])
+      if (isinstance(data, str) == False):
+        self.cols[i].add(int(rowData[i]))
+      
 
 # Num class derived from Col
 class Num(Col):
@@ -164,3 +217,7 @@ if __name__=="__main__":
  
   for lst in fromString(s):
     print(lst)
+
+  tbl = Tbl()
+  tbl.read(s)
+  tbl.dump()
