@@ -30,3 +30,7 @@ class Sym(Col):
       p = self.map[i]/self.n
       res -= (p)*(math.log(p)/math.log(2))
     return res
+
+  def symLike(self, x, prior, m):
+    f = self.map[x] if x in self.map else 0
+    return (f + m * prior) / (self.n + m)

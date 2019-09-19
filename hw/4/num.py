@@ -42,3 +42,9 @@ class Num(Col):
   # update function (helper)
   def update_sd(self):
     self.sd = (self.m2 / (self.n - 1)) ** 0.5
+
+  def numLike(self, x):
+    var = self.sd ** 2
+    denom = (3.14159 * 2 * var) ** 0.5
+    num = 2.71828 ** ( -(x - self.mu) ** 2 / (2 * var + 0.0001))
+    return num / (denom + 10 ** -64)

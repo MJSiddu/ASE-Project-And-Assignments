@@ -1,4 +1,5 @@
 from zeroR import ZeroR
+from nb import Nb
 from abcd import Abcd
 
 import os
@@ -27,8 +28,8 @@ if __name__=="__main__":
     "diabetes": os.path.join(root, 'data/diabetes.csv')
   }
 
-  classifiers = [ZeroR]
-  pre_train = [3]
+  classifiers = [ZeroR, Nb]
+  pre_train = [3, 4]
   for filename, path in files.items():
 
     print("\n")
@@ -42,6 +43,7 @@ if __name__=="__main__":
       data.append(lst)
     
     for pre, classifier in zip(pre_train, classifiers):
+      print(classifier.__name__)
       report(classifier, data, pre)
 
   

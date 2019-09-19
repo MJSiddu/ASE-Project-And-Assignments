@@ -11,5 +11,3 @@ class ZeroR(object):
 
   def classify(self, row):
     return row[self.goalIndex], self.tbl.cols[self.goalIndex].mode
-  
-
