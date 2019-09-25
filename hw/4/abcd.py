@@ -12,11 +12,11 @@ class Abcd(object):
     self.yes = self.no = 0
 
   def abcd1(self, want, got):
-    if self.known[want] == 0:
-      self.known[want] = 1
+    self.known[want] += 1
+    if self.known[want] == 1:
       self.a[want] = self.yes + self.no
-    if self.known[got] == 0:
-      self.known[got] = 1
+    self.known[got] += 1
+    if self.known[got] == 1:
       self.a[got] = self.yes + self.no
 
     if want == got:
