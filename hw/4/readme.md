@@ -5,7 +5,7 @@
 * Because of these small changes in model's initial training data, our results are slightly different from the expected results
 
 
-ZeroR
+**ZeroR**
 ```
 weathernon
  db   | rx | num |  a |  b |  c |  d | acc | pre |  pd |  pf |   f |   g | class
@@ -21,7 +21,7 @@ diabetes
  data | rx | 766 | 24 | 25 | 243 | 474 | 0.65 | 0.66 | 0.95 | 0.91 | 0.78 | 0.16 | tested_negative 
 ```
 
-Naive Bayes
+**Naive Bayes**
 ```
 weathernon
  db   | rx | num |  a |  b |  c |  d | acc | pre |  pd |  pf |   f |   g | class
