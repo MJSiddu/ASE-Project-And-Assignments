@@ -1,4 +1,4 @@
-**Important points regarding the data used in training and testing ZeroR and NB models:**
+**Some important points related to the data used in training and testing the ZeroR and NB models:**
 
 * ZeroR initial training: For both weathernon and diabetes data, we read 3 rows before doing any classification ( the expected results shown in HW4's git doc is doing this with first 2 rows only)
 * Naive Bayes initial training: As suggested in HW4 git doc, We read 4 rows from weathernon data and 20 rows from diabetes data before doing any classification
