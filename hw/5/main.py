@@ -42,8 +42,8 @@ def xx(n):
 
 
 if __name__=="__main__":
-  res_num = xnum(55)
-  res_sym = xsym(55)
+  res_num = xnum(20)
+  res_sym = xsym(20)
   
   # print(res_num)
 
