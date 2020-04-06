@@ -6,4 +6,8 @@
            
 * Siddu Madhure Jayanna - smadhur
 
-#### NOTE: This repository contains all the Assignments and semester project for Automated Software Engineering course (CSC-591)
+### Note: 
+**This repository contains all the Assignments and semester project for Automated Software Engineering course (CSC-591)**
+
+### Project Name: 
+**GitHub Issues Labeller - Intelligently predicts labels for GitHub issues**
